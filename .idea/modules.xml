@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../...iml" filepath="$PROJECT_DIR$/../...iml" />
+      <module fileurl="file://$PROJECT_DIR$/LapisMobile.iml" filepath="$PROJECT_DIR$/LapisMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../appupdatelibrary/appupdatelibrary.iml" filepath="$PROJECT_DIR$/../appupdatelibrary/appupdatelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../commonlibrary/commonlibrary.iml" filepath="$PROJECT_DIR$/../commonlibrary/commonlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../lapisprotocol/lapisprotocol.iml" filepath="$PROJECT_DIR$/../lapisprotocol/lapisprotocol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../printer/printer.iml" filepath="$PROJECT_DIR$/../printer/printer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../usbseriallibrary/usbseriallibrary.iml" filepath="$PROJECT_DIR$/../usbseriallibrary/usbseriallibrary.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    dexOptions {//打包时最大的内存占有
+        javaMaxHeapSize '4g'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'typedefs.txt'//use this method also cannot solve
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/BenchmarkList'
+        exclude 'META-INF/io.netty.versions.properties'
+        exclude 'META-INF/CompilerHints'
+    }
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.laisontech.lapismobile"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    compile project(':..:usbseriallibrary')
+    compile project(':..:commonlibrary')
+    compile project(':..:lapisprotocol')
+    compile project(':..:printer')
+    compile project(':..:appupdatelibrary')
+
+    compile 'org.greenrobot:eventbus:3.1.1'
+    compile 'com.github.sdpsdpsdpsdp:MVPLibrary:1.3.1'//新的网络下载请求方式
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'//用于插入butterknife
+}
